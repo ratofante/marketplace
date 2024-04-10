@@ -1,0 +1,108 @@
+.favorites {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--clr-white);
+
+
+    .favorites-header {
+        margin-block: 100px 40px;
+
+        .title {
+            @extend .inter-semibold;
+            font-size: 42px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        .text {
+            @extend .inter-medium;
+            font-size: 14px;
+            text-align: center;
+            color: var(--clr-light-gray);
+        }
+    }
+
+    .favorites-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid gainsboro;
+        max-width: 1300px;
+
+        &.favorites-list {
+            border: none;
+        }
+
+        &.empty-favorites {
+            min-height: 600px;
+            width: 80vw;
+            max-width: 1370px;
+            padding: 0 6vw;
+        }
+
+        .favorites-secondary-title {
+            @extend .inter-semibold;
+            font-size: 17px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-block: 15px;
+        }
+
+        .favorites-secondary-text {
+            @extend .inter-medium;
+            font-size: 14px;
+            text-align: center;
+            line-height: 1.2;
+            color: var(--clr-light-gray);
+        }
+
+        .btn-primary { 
+            background-color: var(--clr-gold);
+            text-transform: uppercase;
+            margin: 50px 0 0 0;
+
+            &:hover {
+                background-color: var(--clr-dark-gold);
+            }
+        }
+
+        .products-grid {
+            height: 100%;
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 15px;
+
+            @include respond-to("MD") {
+                grid-template-columns: repeat(auto-fill, minmax(265px, 1fr));
+                gap: 30px;
+            }
+            
+            @include respond-to("XXS") {
+                grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+                gap: 10px;
+            }
+
+
+        }
+    }
+
+    .favorites-footer {
+        margin-block: 100px;
+
+        .btn-primary {
+            min-width: 175px;
+            color: var(--clr-black);
+            border-color: var(--clr-black);
+            background-color: var(--clr-white-100);
+
+            &:hover {
+                color: var(--clr-white-100);
+                background-color: var(--clr-black);
+            }
+        }
+    }
+}

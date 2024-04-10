@@ -1,0 +1,54 @@
+.home-brands{
+    max-width: 100vw;
+    overflow: hidden;
+    padding: 8vh 0;
+
+    .home-brands-header {
+        display: flex;
+        margin-bottom: 36px;
+        padding-inline: 3vh;
+
+        .title {
+            @extend .section-title-center;
+            margin: 0;
+        }
+
+        .header-navigation {
+            display: flex;
+            align-items: center;
+
+            .swiper-brands-button-prev {
+                margin-right: 25px;
+            }
+
+            .swiper-brands-button-prev, .swiper-brands-button-next {
+                height: 14px;
+                width: 10px;
+            }
+        }
+
+
+    }
+
+    .swiper-brands{
+        overflow: hidden;
+
+        .swiper-slide {
+            .slide {
+                width: 100%;
+                max-width: 442px;
+
+                .slide-info-btn-mask {
+                    width: 100%;
+
+                    button {
+                        display: block;
+                        margin: auto;
+                    }
+                }
+            }
+        }
+    }
+
+    
+}

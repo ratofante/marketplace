@@ -1,0 +1,153 @@
+.home-collection {
+
+    .title {
+        @extend .section-title-center;
+    }
+
+    .collections-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        justify-items: center;
+        margin-bottom: 6vh;
+        padding-bottom: 6vh;
+        gap: 20px;
+
+        @include respond-to("XS") {
+            grid-template-columns: repeat(2, 1fr);
+            margin-bottom: 0;
+        }
+
+        @include respond-to("XXS") {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+        }
+
+        .collections-col {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            @include respond-to("XXS") {
+                gap: 10px;
+            }
+
+            a {
+                width: 100%;
+                height: 100%;
+
+                .slide {
+                    width: 100%;
+                    height: 100%;
+
+                    .slide-info-btn-mask {
+                        width: 100%;
+                        bottom: 25px;
+
+                        button {
+                            display: block;
+                            margin: auto;
+                            border-bottom: 1px solid #fff;
+                            
+                            span {
+                                @include fontResponsive(11px, 14px, 300px, 1200px);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .top, .bottom {
+                height: 100%;
+                width: 100%;
+            }
+
+            &.middle-col {
+                @include respond-to("XXS") {
+                    order: 2;
+                    gap: 35px;
+                }
+            }
+            
+            &.right-col {
+                @include respond-to("XS") {
+                    gap: 20px;
+                    flex-direction: row;
+                    grid-column-start: span 2;
+                }
+                @include respond-to("XXS") {
+                    gap: 35px;
+                    flex-direction: column;
+                    order: 1;
+                }
+            }
+
+            &.left-col {
+                @include respond-to("XXS") {
+                    flex-direction: column;
+                    order: 3;
+                    gap: 35px;
+                }
+            }
+
+            &.middle-col {
+
+                .top {
+                    @include respond-to("XXS") {
+                        height: 50%;
+                    }
+                }
+
+                .bottom {
+                    height: 50%;
+                }
+            }
+        }
+
+        .slide-info-text-mask {
+
+            span {
+                display: block;
+                text-transform: uppercase;
+                text-align: center;
+                color: white;
+                font-weight: 500;
+                @include fontResponsive(10px, 12px, 300px, 1400px);
+                font-size: 12px;
+                letter-spacing: 1px;
+            }
+
+            h3 {
+                @include fontResponsive(32px, 36px, 300px, 1400px);
+                font-weight: 500;
+                color: white;
+                transform: translateY(0%);
+                text-align: center;
+                text-transform: capitalize;
+                margin-top: 10px;
+
+                
+            }
+            
+        }
+
+        .middle-col {
+            .slide-info-text-mask {
+                span {
+                    @include respond-to("XXS") {
+                        font-size: 12px;
+                    }
+                }
+    
+                h3 {
+                    @include respond-to("XXS") {
+                        font-size: 36px;
+                    }
+                }
+            }
+        }
+
+    }
+
+}

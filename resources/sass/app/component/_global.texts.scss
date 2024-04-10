@@ -1,0 +1,27 @@
+.ff-inter {
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
+}
+.inter-medium {
+    @extend .ff-inter;
+    font-weight: 500;
+}
+.inter-semibold {
+    @extend .ff-inter;
+    font-weight: 600;
+}
+.inter-bold {
+    @extend .ff-inter;
+    font-weight: 700;
+}
+.inter-bolder {
+    @extend .ff-inter;
+    font-weight: 800;
+}
+
+.section-title-center {
+    width: 100%;
+    text-align: center;
+    font-weight: 500;
+    @include fontResponsive(26px, 36px, 320px, 1920px);
+    margin-bottom: 50px;
+}

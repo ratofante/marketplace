@@ -1,0 +1,141 @@
+.brand-presentation {
+
+    .brand-presentation-container {
+        display: flex;
+        padding: 125px 65px 65px 65px;
+        background-color: var(--clr-white-100);
+        border-bottom-left-radius: 15px;
+        border-bottom-right-radius: 15px;
+        margin-bottom: 15px;
+
+        @include respond-to("not-desktop") {
+            flex-direction: column;
+        }
+
+        @include respond-to("XS") {
+            padding: 125px 15px 65px 15px;
+        }
+
+        @include respond-to("SM") {
+            flex-direction: row;
+        }
+    }
+
+    .brand-presentation-bio {
+        width: 50%;
+        padding-right: 65px;
+
+        @include respond-to("not-desktop") {
+            width: 100%;
+            max-width: 570px;
+            padding-right: 0px;
+        }
+
+        .brand-presentation-bio-name {
+            margin-bottom: 30px;
+
+            h1 {
+                @extend .inter-semibold;
+                font-size: 36px;
+                margin-bottom: 5px;
+            }
+            .tagname {
+                font-size: 22px;
+                color: #666666;
+            }
+        }
+        .brand-presentation-bio-story {
+
+            @include respond-to("SM") {
+                padding-right: 50px;
+            }
+
+            span {
+                display: block;
+                margin-bottom: 10px;
+                @extend .inter-semibold;
+                font-size: 22px;
+            }
+            p {
+                font-size: 16px;
+                color: var(--clr-gray-text);
+                line-height: 20px;
+
+                @include respond-to("XS") {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    .brand-presentation-info {
+        display: flex;
+        flex-flow: wrap;
+        width: 50%;
+        gap: 20px;
+
+        @include respond-to("not-desktop") {
+            width: 100%;
+            margin-top: 50px;
+            
+        }
+
+        @include respond-to("SM") {
+            margin-top: 0px;
+            flex-flow: column;
+        }
+
+        @include respond-to("MD") {
+            flex-flow: row wrap;
+        }
+
+        .brand-presentation-info-block {
+            width: 50%;
+            flex: 1 0 40%;
+
+            @include respond-to("not-desktop") {
+                width: unset;
+                flex: 1 0 20%;
+            }
+
+            @include respond-to("XS") {
+                flex: 1 0 40%;
+            }
+
+            @media screen and (max-width: 450px) {
+                flex: 1 0 100%;
+            }
+
+            h5 {
+                @extend .inter-semibold;
+                font-size: 22px;
+                margin-bottom: 10px;
+            }
+            p {
+                font-size: 16px;
+                color: var(--clr-gray-text);
+                line-height: 20px;
+                padding-right: 50px;
+
+                @include respond-to("XS") {
+                    padding-right: 0;
+                }
+            }
+            .brand-bio-phone {
+                display: flex;
+                align-items: center;
+
+                svg {
+                    color: var(--clr-black);
+                    margin-right: 10px;
+                }
+
+                .phone {
+                    font-size: 16px;
+                    color: var(--clr-gray-text);
+                    border-bottom: 1px solid var(--clr-gray-text);
+                }
+            }
+        }
+    }
+}

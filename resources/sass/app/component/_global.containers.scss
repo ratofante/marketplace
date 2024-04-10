@@ -1,0 +1,17 @@
+.container-boxed {
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+
+    @include respond-to("container-boxed") {
+        padding: 0 3vh;
+    }
+
+    @include respond-to("XS") {
+        padding: 0 20px;
+    }
+}
+
+.container-fluid{
+    width: 100%;
+}

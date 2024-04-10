@@ -1,0 +1,184 @@
+.subscribe {
+    padding: 15vh 0;
+    background-color: var(--clr-white-100);
+
+    @include respond-to("XS") {
+        padding: 7.5vh 10px;
+    }
+
+    .subscribe-container {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 950px;
+
+        .tagname {
+            display: block;
+            max-width: 80%;
+            margin: auto;
+            margin-bottom: 10px;
+            text-align: center;
+            font-weight: 500;
+            @include fontResponsive(13px, 17px, 320px, 1920px);
+            font-size: 17px;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            line-height: 25px;
+
+            @include respond-to("XS") {
+                font-size: 12px;
+                letter-spacing: 0.5px;
+                color: #999999;
+                max-width: unset;
+
+                .line-break {
+                    display: none;
+                }
+            }
+        }
+
+        .title {
+            margin-bottom: 40px;
+            text-align: center;
+            font-weight: 700;
+            @include fontResponsive(40px, 110px, 320px, 1920px);
+            text-transform: uppercase;
+
+            @include respond-to("XS") {
+                margin-bottom: 25px;
+            }
+        }
+
+        form {
+            display: flex;
+            align-items: center;
+            width: 65%;
+            margin: auto;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--clr-dark-gray);
+
+            @include respond-to("XS") {
+                width: 252px;
+                flex-flow: row wrap;
+            }
+
+            select {
+                @extend .inter-medium;
+                font-size: 14px;
+                color: var(--clr-dark-gray);
+                background: none;
+                border: none;
+                padding: 0;
+
+                @include respond-to("XS") {
+                    font-size: 13px;
+                    width: 60px;
+                }
+            }
+
+            hr {
+                margin: 0 10px;
+                width: 1px;
+                height: 18px; 
+                background-color: var(--clr-dark-gray);
+                opacity: 0.6;
+
+                @include respond-to("XS") {
+                    margin: 0 5px;
+                }
+            }
+
+            input {
+                background: none;
+                border: none;
+                padding: 0;
+                @extend .inter-medium;
+                color: var(--clr-dark-gray);
+                font-size: 14px;
+                width: 100%;
+                padding-right: 10px;
+
+                @include respond-to("XS") {
+                    flex: 1 0 40%;
+                    padding-right: 0;
+                }
+
+                &::placeholder {
+                    @extend .inter-medium;
+                    font-size: 14px;
+                    color: var(--clr-dark-gray);
+
+                    @include respond-to("XS") {
+                        font-size: 13px;
+                        padding-left: 2px;
+                    }
+                }
+
+                
+            }
+
+            button {
+                @extend .inter-medium;
+                margin-left: auto;
+                font-weight: 600;
+                font-size: 16px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+
+                @include respond-to("XS") {
+                    width: 100%;
+                    margin: 25px auto 0 auto;
+                }
+
+                span {
+                    @include respond-to("XS") {
+                        display: block;
+                        text-align: center;
+                        border-bottom: 1px solid black;
+                        width: fit-content;
+                        margin: auto;
+                    }
+                }
+
+                @include respond-to("XS") {
+                    display: none;
+                }
+            }
+        }
+
+        .subscribe-mobile-btn {
+            display: none;
+
+            @include respond-to("XS") {
+                display: block;
+                color: #000;
+                font-size: 13px;
+                font-weight: 600;
+                border-color: #000;
+                text-transform: uppercase;
+                margin-block: 50px;
+                padding: 15px 50px;
+            }
+        }
+
+        .disclaimer {
+            width: 60%;
+            margin-top: 45px;
+            color: var(--clr-light-gray);
+            text-align: center;
+            line-height: 25px;
+            @include fontResponsive(10px, 14px, 320px, 1920px);
+            margin-inline: auto;
+
+            @include respond-to("XS") {
+                width: 320px;
+                line-height: 20px;
+                font-size: 11px;
+            }
+
+            a {
+                text-decoration: underline;
+                vertical-align: baseline;
+            }
+        }
+    }
+}

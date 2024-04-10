@@ -1,0 +1,45 @@
+/* App styles */
+@import "vars";
+@import "app/fonts";
+
+/* Mixins */
+@import "mixin/index";
+
+/* Core styles */
+@import "core/reset";
+@import "core/mediaqueries";
+@import "core/fontawesome";
+
+/* Components */
+@import "app/component/global.containers";
+@import "app/component/global.texts";
+@import "app/component/global.buttons";
+@import "app/component/global.navigation";
+@import "app/component/select";
+@import "app/component/global.cookies";
+@import "app/component/hero";
+@import "app/component/global.product.card";
+@import "app/component/slide";
+@import "app/component/subscribe";
+@import "app/component/global.subscribe";
+@import "app/component/myswiper";
+
+/* Sections */
+
+@import "app/section/login";
+@import "app/section/home.brands";
+@import "app/section/home.collection";
+@import "app/section/brand.presentation";
+@import "app/section/products.catalog";
+@import "app/section/product.detail";
+@import "app/section/product.slider";
+@import "app/section/banners";
+@import "app/section/favorites";
+@import "app/section/faq";
+@import "app/section/footer";
+
+body {
+	font-family: "Inter", Arial, Helvetica, sans-serif;
+	background-color: var(--clr-white);
+	color: var(--clr-black);
+}

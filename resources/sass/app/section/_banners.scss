@@ -1,0 +1,32 @@
+.banner-single {
+    @include respond-to("XS") {
+        padding-bottom: 6vh;
+    }
+    padding-bottom: 12vh;
+    
+    img {
+        width: 100%;
+    }
+}
+
+.banner-group {
+    background-color: var(--clr-white-100);
+    padding: 12vh 0 0 0;
+
+    @include respond-to("XS") {
+        padding: 6vh 0 0 0;
+    }
+
+    .swiper-banner {
+        overflow: hidden;
+
+        .slide-info-btn-mask {
+            width: 100%;
+
+            .btn-simple {
+                display: block;
+                margin: auto;
+            }
+        }
+    }
+}

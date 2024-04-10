@@ -1,0 +1,81 @@
+.faq {
+    @include respond-to("XS") {
+        padding: 30px 30px 0 30px;
+    }
+    @include respond-to("SM") {
+        padding: 70px 160px 0 160px;
+    }
+    @include respond-to("LG") {
+        padding: 150px 250px;
+    }
+    
+    .faq-container {
+        margin: auto;
+        width: 100%;
+        max-width: 805px;
+
+        .faq-box {
+            border-bottom: 1px solid #999999;
+            
+            .faq-header {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding-block: 30px;
+
+                .faq-title {
+                    font-weight: 700;
+                    @include fontResponsive(20px, 40px, 320px, 1920px);
+                    font-size: 40px;
+                    line-height: 1.2;
+                }
+
+                .faq-btn {
+                    color: #888888;
+                    rotate: 180deg;
+                    transition: color 300ms ease,
+                    rotate 300ms ease;
+                    margin-left: 10px;
+                    
+                    @include respond-to("XS") {
+                        width: 22px;
+                    }
+
+                    svg {
+                        width: 100%;
+                    }
+                }
+
+                &.ui-accordion-header-active {
+
+                    .faq-btn {
+                        rotate: 0deg;
+                        color: #212020;
+                    }
+                }
+
+            }
+
+            .faq-content {
+                height: auto;
+                padding-block: 30px 40px;
+
+                @include respond-to("XS") {
+                    padding: 0 0 30px 0;
+                }
+
+                .faq-text {
+                    font-weight: 600;
+                    color: #555555;
+                    line-height: 1.5;
+                    @include fontResponsive(14px, 18px, 320px, 1920px);
+
+                    @include respond-to("XS") {
+                        font-weight: 500;
+                    }
+                }
+                
+            }
+        }
+    }
+}
